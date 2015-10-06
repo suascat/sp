@@ -1,0 +1,40 @@
+Hello @gpriday 
+
+Please disregard my earlier comment above that I mistakenly posted from another username. Here is my quick review of your theme and and found some issues that I wish you to resolve them. In the meantime I am reviewing rest part of your theme and will come up with more feedbacks if any exists.
+
+
+= REQUIRED = 
+
+== code ==
+
+- Use escape function on attributes e.g. line 33 and 34 of `header.php` ; line 14 of `footer.php` . Also verify similar case on other files as well . [REQUIRED]
+- Please prefix theme functions, classes, global variables, image size name, script and style handles, etc with theme slug. It is missing on `functions.php` line 8,9 ; footer.php line no. 20 etc. Please check on other files too. http://themereview.co/prefix-all-the-things/ 
+
+
+== files ==
+
+- Specifically document the purpose of this file `woocommerce.php` in your theme. Current documentation defines it as a default page.
+- Only commented code found on this file `rtl.css`, looks like your theme does not support RTL .If so, please remove it. 
+- Also maintain the changelog.txt file separately as per theme standard
+
+= RECOMMENDED = 
+- Use hyphne instead of underscore on Jquery handler. For reference `customizer.php` line 24 etc.
+
+== Theme Check ===
+- RECOMMENDED: No reference to add_theme_support( "custom-header", $args ) was found in the theme. It is recommended that the theme implement this functionality if using an image for the header.
+- RECOMMENDED: No reference to add_editor_style() was found in the theme. It is recommended that the theme implement editor styling, so as to make the editor content match the resulting post output in the theme, for a better user experience.
+- RECOMMENDED: Theme URI: is missing from your style.css header.
+- RECOMMENDED: Non-printable characters were found in the settings.php file. You may want to check this file for errors. Line 289: $defaults['footer_text'] = __('Copyright ï¿½ï¿½ {year} {sitename}', 'siteorigin-north');
+- RECOMMENDED: More than one text-domain is being used in this theme. This means the theme will not be compatible with WordPress.org language packs. The domains found are siteorigin-north, siteorigin-widgets
+
+
+----
+ 
+'''Note:'''
+ 
+* REQUIRED points should be resolved to make theme approved. RECOMMENDED points includes best practices and theme will not be rejected on the base of RECOMMENDED points.
+* Please fix issues and reupload your theme.  https://wordpress.org/themes/upload/
+* Please respond within 7 days. If there is no response for 7 days, ticket will be closed as `not-approved`.
+* Please check theme guideline if any confusion. https://make.wordpress.org/themes/handbook/guidelines/
+
+Best Regards,
