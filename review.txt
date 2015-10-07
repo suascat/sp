@@ -1,21 +1,17 @@
-Hello @gpriday 
-
-Please disregard my earlier comment above that I mistakenly posted from another username. Here is my quick review of your theme and and found some issues that I wish you to resolve them. In the meantime I am reviewing rest part of your theme and will come up with more feedbacks if any exists.
-
-
 = REQUIRED = 
 
 == code ==
 
-- Use escape function on attributes e.g. line 33 and 34 of `header.php` ; line 14 of `footer.php` . Also verify similar case on other files as well . [REQUIRED]
+- As considered good practice of using standard files, please make a separate file form search form and use `get_search_form()` to call that file on theme. For reference `header.php` line 71. https://codex.wordpress.org/Function_Reference/get_search_form
+- Use escape function on attributes e.g. line 33 and 34 of `header.php` ; line 14 of `footer.php` . Also verify similar case on other files as well .
 - Please prefix theme functions, classes, global variables, image size name, script and style handles, etc with theme slug. It is missing on `functions.php` line 8,9 ; footer.php line no. 20 etc. Please check on other files too. http://themereview.co/prefix-all-the-things/ 
 
 
 == files ==
 
-- Specifically document the purpose of this file `woocommerce.php` in your theme. Current documentation defines it as a default page.
+- Document this file `woocommerce.php` properly so as to know its purpose in your theme. Current documentation defines it as a default page.
 - Only commented code found on this file `rtl.css`, looks like your theme does not support RTL .If so, please remove it. 
-- Also maintain the changelog.txt file separately as per theme standard
+- Also maintain all your changelog in the changelog.txt file separately as per theme standard
 
 = RECOMMENDED = 
 - Use hyphne instead of underscore on Jquery handler. For reference `customizer.php` line 24 etc.
